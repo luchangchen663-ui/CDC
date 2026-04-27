@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+            --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+            --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+            --color-acid-green: #ccff00;
+            --color-industrial-red: #ef4444;
+            --color-bg-dark: #0a0a0a;
+            --color-panel-dark: #111111;
+            --color-border-dark: #222222;
+            --color-border-accent: #333333;
+        }
+        @layer base {
+            body {
+                @apply bg-bg-dark text-[#f0f0f0] font-sans cursor-default selection:bg-acid-green selection:text-black;
+            }
+            .brutalist-border {
+                @apply border border-border-accent hover:border-acid-green transition-colors duration-300;
+            }
+            .mono-label {
+                @apply font-mono text-[10px] uppercase tracking-[0.2em] text-gray-500;
+            }
+            .massive-heading {
+                @apply text-[70px] md:text-[110px] font-black leading-[0.85] tracking-tighter uppercase;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-4xl w-full brutalist-border p-8 bg-panel-dark">
+        <span class="mono-label">Welcome to</span>
+        <h1 class="massive-heading text-acid-green">My Portfolio</h1>
+        <p class="mt-6 text-lg opacity-80 max-w-xl">
+            A clean, modern portfolio built with Tailwind CSS. This is just a starting point — you can customize everything here!
+        </p>
+        <button class="mt-8 brutalist-border px-6 py-3 bg-transparent hover:bg-acid-green hover:text-black transition-colors duration-300 font-bold">
+            View My Work
+        </button>
+    </div>
+</body>
+</html>
